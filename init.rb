@@ -8,10 +8,10 @@ require_dependency 'hooks/project_settings_tab'
 require_dependency 'mailers/daily_reports_mailer'
 
 Redmine::Plugin.register :redmine_daily_reports do
-  name 'Daily Reports'
+  name 'Redmine Daily Reports plugin'
   author 'Alexander Morozov'
   description 'Team Projects Daily Reports'
-  version '0.1.0'
+  version '0.1.1'
   url 'https://github.com/blddmnd/redmine_daily_reports'
   author_url 'http://customertimes.com/'
 

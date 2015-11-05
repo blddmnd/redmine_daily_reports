@@ -1,6 +1,6 @@
 class CreateDailyReports < ActiveRecord::Migration
   def change
-    create_table :ct_daily_reports do |t|
+    create_table :ct_daily_reports, options: 'DEFAULT CHARSET=utf8' do |t|
       t.integer :author_id
       t.integer :project_id
       t.text :text

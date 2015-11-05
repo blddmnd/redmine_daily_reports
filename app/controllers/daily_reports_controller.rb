@@ -63,6 +63,7 @@ class DailyReportsController < ApplicationController
   end
 
   def reload_form
+    @daily_report.text = params[:text].gsub(/\n/, "\r\n") if params[:text].present?
   end
 
   def save_settings

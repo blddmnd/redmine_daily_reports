@@ -1,2 +1,5 @@
 | $('#form-area').html("#{j render('form') }");
 | setFormDatepicker();
+
+- if @daily_report.persisted? && @daily_report.text_changed?
+  | if(!confirm("#{j l(:daily_report_text_replace_confirmation)}")) { $('#daily-report-text').val("#{j @daily_report.text_was}") };

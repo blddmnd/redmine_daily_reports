@@ -41,7 +41,11 @@ $(document).on('change', '#daily_report_author_id, #daily-report-date', function
   $.ajax({
     type: 'GET',
     url: $('#daily_report_reload_form_url').val(),
-    data: { date: $('#daily-report-date').val(), author_id: $('#daily_report_author_id').val() },
+    data: {
+      date: $('#daily-report-date').val(),
+      author_id: $('#daily_report_author_id').val(),
+      text: $('#daily-report-text').val()
+    },
     dataType: 'script'
   });
 });

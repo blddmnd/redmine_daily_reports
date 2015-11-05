@@ -17,6 +17,8 @@ ru:
   daily_report_day_in_week: День недели
   daily_report_save: Сохранить
 
+  daily_report_text_replace_confirmation: Ваш предыдущий отчёт будет перезаписан
+
   daily_reports_daily_subject: "Дневные отчёты (%{date})"
   daily_reports_weekly_subject: "Недельные отчёты (с %{from} по %{to})"
   daily_reports_mailer_footer: "Вы получили это письмо, так как подписаны на рассылку, либо вовлечены в проект.\nЕсли вы хотите отказаться от рассылки, пожалуйста, свяжитесь с администратором."
