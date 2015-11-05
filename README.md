@@ -1,6 +1,8 @@
 Redmine Daily Reports Plugin
 ====================
 
+# [Easy Redmine](https://www.easyredmine.com) required
+
 ## About:
 
 Daily Report Plugin is created to simplify a team and project coordination. There is ability for automatic email sending to specified emails (customer, project manager, product owner etc.) which set in the settings. Plugin is set up to separate projects into Project panel. So it is easy to check reports for different projects separatly. Each project team member will create own daily report which will be collected in project daily report and sent to specified emails. Daily Reports can be created/edited for previous days but it can be limited by admin. Automatic sending (frequency, time etc) adjusts by admin.
