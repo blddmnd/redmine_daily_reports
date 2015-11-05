@@ -1,7 +1,4 @@
-Redmine Daily Reports Plugin
-====================
-
-# [Easy Redmine](https://www.easyredmine.com) required
+# Redmine Daily Reports Plugin | [Easy Redmine](https://www.easyredmine.com) required
 
 ## About:
 
