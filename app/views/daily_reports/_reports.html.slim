@@ -1,0 +1,9 @@
+h2
+  = @date
+  - if @project.can_create_daily_report?(@date)
+    = link_to new_project_daily_report_path(@project, date: @date), class: 'pull-right' do
+      = l(:daily_report_new)
+      i.icon.icon-add.xl-icon
+
+- @daily_reports.each do |report|
+  = render partial: 'user_report', locals: { report: report }

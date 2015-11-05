@@ -1,0 +1,39 @@
+# Russian strings go here for Rails i18n
+ru:
+  daily_reports: Дневные отчёты
+  daily_report_new: Новый дневной отчёт
+  daily_report_edit: Редактировать дневной отчёт
+  daily_report_delete: Удалить дневной отчёт
+  daily_report_author_label: Автор
+  daily_report_date_label: Дата
+
+  daily_report_days_limit: Дней на редактирование
+  daily_report_per_day: Раз в день
+  daily_report_per_week: Раз в неделю
+  daily_report_active: Включено?
+  daily_report_include_today: Включая текущий день?
+  daily_report_emails: Emails(разделены запятой)
+  daily_report_time: Время
+  daily_report_day_in_week: День недели
+  daily_report_save: Сохранить
+
+  daily_reports_daily_subject: "Дневные отчёты (%{date})"
+  daily_reports_weekly_subject: "Недельные отчёты (с %{from} по %{to})"
+  daily_reports_mailer_footer: "Вы получили это письмо, так как подписаны на рассылку, либо вовлечены в проект.\nЕсли вы хотите отказаться от рассылки, пожалуйста, свяжитесь с администратором."
+
+  permission_manage_daily_reports: Управление дневными отчётами
+  permission_manage_daily_reports_project_setting: Настройка дневных отчётов
+  permission_view_daily_reports: Просмотр дневных отчётов
+  project_module_daily_reports: Дневные отчёты
+
+  daily_reports_date_error: Дата неправильна
+  daily_report_back_button: Назад
+  helpers:
+    submit:
+      daily_report:
+        create: Создать
+        update: Обновить
+
+  easy_rake_tasks:
+    easy_rake_task_daily_reports:
+      caption: Дневной отчёт - оповещение

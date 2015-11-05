@@ -1,0 +1,36 @@
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+.field {
+  margin: 5px 0;
+}
+h2.daily-report-header {
+  margin: 15px 0 0 210px;
+}
+span.day-in-week {
+  margin-right: 10px;
+}
+label.daily-report-label {
+  width: 200px;
+  float: left;
+  text-align: right;
+  display: block;
+  margin-right: 10px;
+}
+.daily-report-save {
+  margin-left: 210px;
+}
+.actions {
+  margin-top: 10px;
+}
+.daily-report-back {
+  margin-left: 15px;
+}
+.daily-report-form {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}

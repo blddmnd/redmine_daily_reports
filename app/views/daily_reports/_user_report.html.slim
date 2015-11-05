@@ -1,0 +1,13 @@
+article.news-article
+  header
+  h3
+    = avatar(report.author, size: '24')
+    = link_to_user(report.author)
+    - if report.editable?(@project)
+      = link_to edit_project_daily_report_path(@project, report) do
+        span.icon.icon-edit
+      = link_to project_daily_report_path(@project, report), method: :delete, data: { confirm: 'Are you sure?' }, class: 'link-delete', remote: true do
+        span.icon.icon-del
+  .wiki.daily-report-text
+    = textilizable(report.text)
+  hr/

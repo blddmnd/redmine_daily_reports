@@ -1,0 +1,10 @@
+= @project.name
+
+- @reports.each do |user, reports|
+  = user.name
+
+  - reports.each do |report|
+    = report.report_date
+    = textilizable(report.text)
+    | ---------------------------------
+  | ---------------------------------------------------------------------

@@ -1,0 +1,6 @@
+#reports
+  = render 'reports'
+
+- content_for :sidebar
+  #datepicker
+  = hidden_field_tag :report_date, @date

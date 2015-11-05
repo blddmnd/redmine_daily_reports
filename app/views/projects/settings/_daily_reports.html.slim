@@ -1,0 +1,59 @@
+- setting = @project.get_daily_reports_setting
+- daily, weekly = @project.get_daily_reports_notifications
+
+= form_tag save_settings_project_daily_reports_path(@project), method: :post do
+  .fields-group
+    .field
+      = label_tag '', l(:daily_report_days_limit), class: 'daily-report-label'
+      = number_field_tag 'setting[days_limit]', setting.days_limit, min: 1
+
+  h2.daily-report-header = l(:daily_report_per_day)
+  .fields-group
+    .field
+      = label_tag '', l(:daily_report_active), class: 'daily-report-label'
+      = hidden_field_tag 'daily[active]', 0
+      = check_box_tag 'daily[active]', 1, daily.active, class: 'js-daily-report-notify'
+    .group
+      .field
+        = label_tag '', l(:daily_report_include_today), class: 'daily-report-label'
+        = hidden_field_tag 'daily[include_today]', 0
+        = check_box_tag 'daily[include_today]', 1, daily.include_today
+      .field
+        = label_tag '', l(:daily_report_emails), class: 'daily-report-label'
+        = text_field_tag 'daily[emails]', daily.emails.join(', ')
+      .field
+        = label_tag '', l(:daily_report_time), class: 'daily-report-label'
+        = hidden_field_tag 'daily[period_options][period]', 'every_day'
+        = select_tag 'daily[period_options][hours]', hourstimecheck_collection_for_select_options(daily.period_options[:hours])
+
+  h2.daily-report-header = l(:daily_report_per_week)
+  .fields-group
+    .field
+      = label_tag '', l(:daily_report_active), class: 'daily-report-label'
+      = hidden_field_tag 'weekly[active]', 0
+      = check_box_tag 'weekly[active]', 1, weekly.active, class: 'js-daily-report-notify'
+    .group
+      .field
+        = label_tag '', l(:daily_report_include_today), class: 'daily-report-label'
+        = hidden_field_tag 'weekly[include_today]', 0
+        = check_box_tag 'weekly[include_today]', 1, weekly.include_today
+      .field
+        = label_tag '', l(:daily_report_emails), class: 'daily-report-label'
+        = text_field_tag 'weekly[emails]', weekly.emails.join(', ')
+      .field
+        = label_tag '', l(:daily_report_day_in_week), class: 'daily-report-label'
+        = hidden_field_tag 'weekly[period_options][period]', 'days_in_week'
+        - 1.upto(7) do |n|
+          span.day-in-week
+            = radio_button_tag 'weekly[period_options][days_in_week][]', n, (weekly.period_options[:days_in_week] || []).include?(n.to_s)
+            = label_tag "weekly_period_options_days_in_week_#{n}", day_name((EasyExtensions::Calendars::Calendar.first_wday+(n-1))%7), class: 'inline'
+      .field
+        = label_tag '', l(:daily_report_time), class: 'daily-report-label'
+        = select_tag 'weekly[period_options][hours]', hourstimecheck_collection_for_select_options(weekly.period_options[:hours])
+
+  .actions
+    = submit_tag l(:daily_report_save), class: 'daily-report-save'
+
+- content_for :header_tags
+  = stylesheet_link_tag('daily_reports', plugin: 'redmine_daily_reports', media: 'screen')
+  = javascript_include_tag('daily_reports_settings', plugin: 'redmine_daily_reports')

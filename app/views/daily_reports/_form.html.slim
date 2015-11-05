@@ -1,0 +1,24 @@
+- if @daily_report.new_record?
+  h2 = l(:daily_report_new)
+- else
+  h2 = l(:daily_report_edit)
+
+= error_messages_for @daily_report
+= form_for [@project, @daily_report] do |f|
+  - if User.current.allowed_to?(:manage_daily_reports, @project)
+    .field
+      = f.label :author_id, l(:daily_report_author_label), class: 'daily-report-form'
+      = f.select :author_id, options_from_collection_for_select(@users, 'id', 'name', @daily_report.author_id)
+  - else
+    = f.hidden_field :author_id, value: User.current.id
+  = f.hidden_field :reload_form_url, value: reload_form_project_daily_reports_path(@project)
+  .field
+    = f.text_area :text, size: '100x10', id: 'daily-report-text'
+  .field
+    = f.label :report_date, l(:daily_report_date_label), class: 'daily-report-form'
+    = f.text_field :report_date, id: 'daily-report-date', data: { min: @daily_report.min_date }
+  .actions
+    = f.submit
+    = link_to l(:daily_report_back_button), project_daily_reports_path(date: @date), class: 'button-2 daily-report-back'
+
+= wikitoolbar_for 'daily-report-text'

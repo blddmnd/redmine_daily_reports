@@ -1,0 +1,11 @@
+h1 = link_to_project(@project)
+br/
+- @reports.each do |user, reports|
+  h2 = user.name
+  br/
+  - reports.each do |report|
+    article
+      header
+        h4 = report.report_date
+      = textilizable(report.text)
+  hr/

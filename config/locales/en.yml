@@ -1,0 +1,39 @@
+# English strings go here for Rails i18n
+en:
+  daily_reports: Daily reports
+  daily_report_new: New daily report
+  daily_report_edit: Edit daily report
+  daily_report_delete: Delete daily report
+  daily_report_author_label: Author
+  daily_report_date_label: Report date
+
+  daily_report_days_limit: Days for edit
+  daily_report_per_day: Once per day
+  daily_report_per_week: Once per week
+  daily_report_active: Enabled?
+  daily_report_include_today: Include current day?
+  daily_report_emails: Emails(separeted by comma)
+  daily_report_time: Time
+  daily_report_day_in_week: Day in week
+  daily_report_save: Save
+
+  daily_reports_daily_subject: "Daily reports (%{date})"
+  daily_reports_weekly_subject: "Weekly reports (from %{from} to %{to})"
+  daily_reports_mailer_footer: "You have received this notification because you have either subscribed to it, or are involved in it.\nTo change your notification preferences, please contact administrator."
+
+  permission_manage_daily_reports: Manage daily reports
+  permission_manage_daily_reports_project_setting: Daily reports settings
+  permission_view_daily_reports: View daily reports
+  project_module_daily_reports: Daily reports
+
+  daily_reports_date_error: Date is invalid
+  daily_report_back_button: Back
+  helpers:
+    submit:
+      daily_report:
+        create: Create
+        update: Update
+
+  easy_rake_tasks:
+    easy_rake_task_daily_reports:
+      caption: Daily reports - notify

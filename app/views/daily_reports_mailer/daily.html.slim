@@ -1,0 +1,9 @@
+h1 = link_to_project(@project)
+br/
+- @reports.each do |report|
+  article
+    header
+      h3 = report.author.name
+      br/
+    = textilizable(report.text)
+  hr/
